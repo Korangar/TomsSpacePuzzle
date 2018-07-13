@@ -5,11 +5,12 @@ using UnityEngine;
 public class JetThrustBehaviour : MonoBehaviour {
 
     public float thrusterStrength = 0.5f;
-    public Color thrustEnabledColor = Color.red;
-
     Rigidbody2D playerRigidbody;
-    SpriteRenderer thrusterSprite;
-    Color memorizedColor;
+
+    [Header("Debug")]
+    public SpriteRenderer thrusterSprite;
+    public Color thrustEnabledColor = Color.red;
+    private Color memorizedColor;
 
     void Start () {
         playerRigidbody = GetComponentInParent<Rigidbody2D>();
@@ -24,7 +25,6 @@ public class JetThrustBehaviour : MonoBehaviour {
 
     private void OnEnable()
     {
-        if (!thrusterSprite) thrusterSprite = GetComponent<SpriteRenderer>();
         memorizedColor = thrusterSprite.color;
         thrusterSprite.color = thrustEnabledColor;
     }
