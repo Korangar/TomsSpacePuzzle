@@ -2,22 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JetThrustBehaviour : MonoBehaviour {
-
+public class JetThrustBehaviour : MonoBehaviour
+{
     public float thrusterStrength = 0.5f;
-    Rigidbody2D playerRigidbody;
 
-    [Header("Debug")]
-    public SpriteRenderer thrusterSprite;
-    public Color thrustEnabledColor = Color.red;
-    private Color memorizedColor;
+    private Rigidbody2D playerRigidbody;
+    private ParticleSystem thrusterParticles;
+    private Animator thrusterAnimator;
 
-    void Start () {
+    void Awake ()
+    {
         playerRigidbody = GetComponentInParent<Rigidbody2D>();
+        thrusterAnimator = GetComponentInChildren<Animator>();
+        thrusterParticles = GetComponentInChildren<ParticleSystem>();
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         Vector2 thrusterPosition = transform.position;
         Vector2 thrusterForce = transform.up * thrusterStrength;
         playerRigidbody.AddForceAtPosition(thrusterForce, thrusterPosition);
@@ -25,12 +27,13 @@ public class JetThrustBehaviour : MonoBehaviour {
 
     private void OnEnable()
     {
-        memorizedColor = thrusterSprite.color;
-        thrusterSprite.color = thrustEnabledColor;
+        thrusterAnimator.SetBool("enabled", true);
+        thrusterParticles.Play();
     }
 
     private void OnDisable()
     {
-        thrusterSprite.color = memorizedColor;
+        thrusterAnimator.SetBool("enabled", false);
+        thrusterParticles.Stop();
     }
 }
