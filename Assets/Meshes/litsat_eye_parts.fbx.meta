@@ -1,0 +1,156 @@
+fileFormatVersion: 2
+guid: 9489fc7421d2cc243905e2093cb77aad
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ey_lid_lower
+    100002: ey_lid_upper
+    100004: eye_pupil
+    100006: eye_transp
+    100008: eye_white
+    100010: //RootNode
+    100012: eye_lid_lower
+    100014: eye_lid_upper
+    400000: ey_lid_lower
+    400002: ey_lid_upper
+    400004: eye_pupil
+    400006: eye_transp
+    400008: eye_white
+    400010: //RootNode
+    400012: eye_lid_lower
+    400014: eye_lid_upper
+    2100000: eye_white
+    2100002: eye_pupil
+    2100004: eye_transp
+    2100006: sat_eyes
+    2100008: eye_lid_upper
+    2100010: eye_lid_lower
+    2300000: ey_lid_lower
+    2300002: ey_lid_upper
+    2300004: eye_pupil
+    2300006: eye_transp
+    2300008: eye_white
+    2300010: eye_lid_lower
+    2300012: eye_lid_upper
+    3300000: ey_lid_lower
+    3300002: ey_lid_upper
+    3300004: eye_pupil
+    3300006: eye_transp
+    3300008: eye_white
+    3300010: eye_lid_lower
+    3300012: eye_lid_upper
+    4300000: eye_white
+    4300002: eye_pupil
+    4300004: eye_transp
+    4300006: ey_lid_upper
+    4300008: ey_lid_lower
+    4300010: eye_lid_upper
+    4300012: eye_lid_lower
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye_lid_lower
+    second: {fileID: 2100000, guid: 12beb3510de21404093e9f802730eb6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye_lid_upper
+    second: {fileID: 2100000, guid: b8013d3c42feb3146b37adc45fc4a964, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye_pupil
+    second: {fileID: 2100000, guid: a6a6fb875a251454b85abdb79af3847b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye_transp
+    second: {fileID: 2100000, guid: a35fe91255fac1640ae830312cb63d82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye_white
+    second: {fileID: 2100000, guid: 2b90efb49620ec4479d53667b6acf434, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
