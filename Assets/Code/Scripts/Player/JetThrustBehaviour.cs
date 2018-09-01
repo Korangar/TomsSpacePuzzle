@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class JetThrustBehaviour : MonoBehaviour
 {
-    public float thrusterStrength = 0.5f;
+    public float thrusterStrength = 1f;
+    public float thrustRythm = .5f;
 
     private Rigidbody2D playerRigidbody;
     private ParticleSystem thrusterParticles;
@@ -18,10 +19,10 @@ public class JetThrustBehaviour : MonoBehaviour
     }
 	
 	// Update is called once per frame
-	void Update ()
+	void ApplyForce ()
     {
         Vector2 thrusterPosition = transform.position;
-        Vector2 thrusterForce = transform.up * thrusterStrength;
+        Vector2 thrusterForce = transform.up * thrusterStrength * thrustRythm;
         playerRigidbody.AddForceAtPosition(thrusterForce, thrusterPosition);
 	}
 
@@ -29,11 +30,15 @@ public class JetThrustBehaviour : MonoBehaviour
     {
         thrusterAnimator.SetBool("enabled", true);
         thrusterParticles.Play();
+        InvokeRepeating("ApplyForce", 0, thrustRythm);
     }
 
     private void OnDisable()
     {
         thrusterAnimator.SetBool("enabled", false);
         thrusterParticles.Stop();
+        CancelInvoke("ApplyForce");
     }
+
+
 }
